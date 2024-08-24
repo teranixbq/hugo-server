@@ -112,6 +112,16 @@
                     </li>
                     {{ end }}
 
+
+                     {{ if and (.Site.Params.organization.enable | default false) (not (.Site.Params.navbar.menus.disableOrganization | default false)) }}
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#organization"
+                            aria-label="organization">
+                            {{ .Site.Params.organization.title | default "Organization" }}
+                        </a>
+                    </li>
+                    {{ end }}
+
                     {{ if and (.Site.Params.projects.enable | default false) (not (.Site.Params.navbar.menus.disableProjects | default false)) }}
                     <li class="nav-item navbar-text">
                         <a class="nav-link" href="{{ .Site.BaseURL | relURL }}#projects"
