@@ -238,6 +238,7 @@ header .navbar.animate {
     font-weight: 500;
     opacity: 0.9 !important;
     line-height: 1.7rem !important;
+    text-align: justify;
 }
 
 #about a {
